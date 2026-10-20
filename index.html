@@ -127,7 +127,7 @@
 .event-chip--legacy {
   color: var(--legacy);
   background: var(--legacy-soft);
-}
+ }
 
     .event-date {
       color: var(--muted);
@@ -169,11 +169,9 @@
       background: var(--accent);
     }
 
-    /* Override the library's default orange timeline styling. */
     .timeline--horizontal .timeline-divider {
       background-color: var(--accent);
     }
-
 
     .timeline-nav-button {
       border-color: var(--accent);
@@ -227,9 +225,6 @@
   box-sizing: border-box;
 }
 
-
-
-/* Replace timeline dots with hedgeballs */
 .timeline--horizontal .timeline__item::after {
   content: "";
   width: 24px !important;
@@ -293,7 +288,6 @@
   </article>
 </div>
 
-
 <div class="timeline__item">
   <article class="timeline__content">
     <img
@@ -308,7 +302,7 @@
   </figcaption>
     <div class="event-body">
       <div class="event-meta">
-        <span class="event-chip event-chip--promotion">Promotion</span>
+        <span class="event-chip event-chip--promotion">Popularity</span>
         <time class="event-date">1841-1847</time>
       </div>
 
@@ -334,7 +328,6 @@
   </article>
 </div>
 
-
 <div class="timeline__item">
   <article class="timeline__content">
 <img
@@ -349,7 +342,7 @@
   </figcaption>
     <div class="event-body">
       <div class="event-meta">
-        <span class="event-chip event-chip--spread">Spread</span>
+        <span class="event-chip event-chip--spread">Expansion</span>
         <time class="event-date">1850s-1870s</time>
       </div>
 
@@ -373,7 +366,6 @@
 
   </article>
 </div>
-
 
 <div class="timeline__item">
   <article class="timeline__content">
@@ -402,7 +394,7 @@
         attracting “a large share of attention” and recorded about 11 miles of 
         hedge already growing in the county. Osage-orange became Iowa’s most
         successful substitute fencing material until barbed wire began replacing
-        living hedges in the 1870s. 
+        living hedges in the 1870s.
       </p>
       <p class="event-source">
       <a href="https://publications.iowa.gov/28626/1/Iowa_Conservationist_1950_V09_N01.pdf?">
@@ -412,7 +404,6 @@
 
   </article>
 </div>
-
 
 <div class="timeline__item">
   <article class="timeline__content">
@@ -428,7 +419,7 @@
   </figcaption>
     <div class="event-body">
       <div class="event-meta">
-        <span class="event-chip event-chip--change">Change</span>
+        <span class="event-chip event-chip--change">Replaced</span>
         <time class="event-date">1870s-1895</time>
       </div>
 
@@ -452,7 +443,6 @@
 
   </article>
 </div>
-
 
 <div class="timeline__item">
   <article class="timeline__content">
@@ -548,18 +538,15 @@ function flattenDesktopTimeline() {
 
   });
 
-
   /* Find tallest card slot */
   const maxHeight = Math.max(
     ...items.map(item => item.offsetHeight)
   );
 
-
   /* Make every slot equally tall */
   items.forEach(item => {
     item.style.height = maxHeight + 'px';
   });
-
 
   /*
     Only keep enough space for one row of cards
@@ -569,12 +556,10 @@ function flattenDesktopTimeline() {
     scroller.style.height = (maxHeight + 32) + 'px';
   }
 
-
   /* Put timeline directly below cards */
   if (divider) {
     divider.style.top = maxHeight + 'px';
   }
-
 
   /* Put arrows on the same line */
   buttons.forEach(button => {
@@ -583,10 +568,8 @@ function flattenDesktopTimeline() {
 
 }
 
-
 /* Run once after Squarechip builds the timeline */
 requestAnimationFrame(flattenDesktopTimeline);
-
 
 /*
   Squarechip recalculates itself after resizing,
